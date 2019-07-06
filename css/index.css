@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-size: .28rem;
+}
+
+body,dd, dl, dt, form, h1, h2, h3, h4, h5, h6, html, img, input, li, ol, p, ul{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    color: #444;
+}
+
+
+.main-container{
+	position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.banner-swiper {
+    width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+}
+
+.swiper-wrapper img{
+	width: 100%;
+}
+
+.card-box {
+    z-index: 2;
+}
+
+.select-zone {
+    background: #fff;
+    overflow: hidden;
+    padding: .2rem;
+    box-shadow: 0 8px 14px 0 hsla(0,0%,92%,.6);
+    border-radius: 8px;
+}
+
+.box-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-flex li{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	text-align: center;
+}
+
+.box-flex li i{
+	font-size: 1rem;
+}
+
+.box-flex .icon_baojia i {
+	color: #48ba63;
+}
+
+.box-flex .icon_how_buy i {
+	color: #ffb200;
+	font-size: .9rem;
+}
+
+.box-flex .icon_lipei i {
+	color: #7f25e6;
+}
+	
+.box-flex .icon_mine i {
+	color: #FF5122;
+}
+	

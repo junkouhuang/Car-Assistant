@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	box-sizing: border-box;
+	font-style: normal;
+	}
+html {
+    font-size: 100px;
+	}
+body {
+    background: #fff;
+    color: #444;
+	}
+body, button, input, select, textarea {
+    font: .14rem/1.6 Arial,sans-serif;
+}
+.login-view{
+	width: 100%;
+	height: 100%;
+	}
+.login-wrap {
+    width:100%;
+    height: auto;
+    min-height: 100%;
+	}
+.login {
+    width: 100%;
+    height: 100%;
+	}
+.login-title {
+    padding-top: .42rem;
+    padding-bottom: .35rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #222;
+    letter-spacing: 0;
+    line-height: .24rem;
+	}
+.login-input-phone, .login-input-pw {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    width: 78%;
+    height: .45rem;
+    box-sizing: border-box;
+    padding-left: .2rem;
+    line-height: .45rem;
+    margin: .25rem auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 55px;
+	}
+.login-input-phone input, .login-input-pw input {
+    width: 90%;
+    background: #fff;
+    outline: none;
+    border: none;
+	}
+.login-btn {
+    width: 78%;
+    height: .45rem;
+    text-align: center;
+    line-height: .45rem;
+    color: #fff;
+    margin: .25rem auto;
+    background: linear-gradient(90deg,#689ffd,#3780fd);
+    border-radius: 55px;
+    opacity: .6;
+	}
+.login-protocol {
+    width: 100%;
+    text-align: center;
+    color: #a5a5a5;
+    font-size: .12rem;
+	}
+.login-protocol {
+    width: 100%;
+    text-align: center;
+    color: #a5a5a5;
+    font-size: .12rem;
+	}
+	.login-protocol span {
+    color: #689ffd;
+	}
