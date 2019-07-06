@@ -93,4 +93,16 @@ body {
 .box-flex .icon_mine i {
 	color: #FF5122;
 }
-	
+
+.img-btn{
+	position: fixed;
+	top: 50%;
+	margin-top: -1.5rem;
+	width: 1.2rem;
+	height: 3rem;
+	right: 0;
+}
+
+.img-btn img {
+	width: 100%;
+}	
