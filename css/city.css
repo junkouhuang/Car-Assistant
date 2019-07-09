@@ -205,7 +205,7 @@ select {
 .store-info-form .form-item {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 1.6rem 0.76rem;
+  padding: 0 0.1rem;
 }
 .store-info-form span.tip-active {
   color: #de3939;
@@ -217,7 +217,7 @@ select {
   color: #ccc;
 }
 .store-info-form .controls-store {
-  height: 1.56rem;
+  height: 1rem;
 }
 .store-info-form .controls {
   box-sizing: border-box;
@@ -230,7 +230,7 @@ select {
 .store-info-form .controls textarea {
   box-sizing: border-box;
   width: 100%;
-  font-size: 0.6rem;
+  font-size: 0.3rem;
   color: #666666;
 }
 .store-info-form .controls input {
@@ -280,8 +280,8 @@ select {
 }
 .store-info-form .hot-city-title {
   box-sizing: border-box;
-  padding: 0.7rem 1rem 0.58rem;
-  height: 1.88rem;
+  padding: 0.3rem;
+  height: 1rem;
   background: #fff;
 }
 .store-info-form .hot-city-title i {
@@ -296,7 +296,7 @@ select {
   display: inline-block;
   vertical-align: top;
   line-height: 0.6rem;
-  font-size: 0.6rem;
+  font-size: 0.3rem;
   font-weight: 700;
   color: #666;
 }
@@ -305,7 +305,7 @@ select {
   right: 0;
   left: 0;
   bottom: 0;
-  width: 14rem;
+  width: 6.5rem;
   margin: 0 auto;
   border-radius: 0.2rem 0.2rem 0 0;
   overflow: hidden;
@@ -316,21 +316,21 @@ select {
   border-radius: 0.2rem 0.2rem 0 0;
 }
 .store-info-form .city-box .hot-city .hot {
-  padding: 0 1.8rem 0 1rem;
+  padding: 0  .2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   flex-flow: wrap;
   align-content: space-around;
   width: 100%;
-  height: 3.6rem;
+  height: 1.6rem;
 }
 .store-info-form .city-box .hot-city .hot a {
   display: block;
   box-sizing: border-box;
-  width: 5.2rem;
-  line-height: 1.52rem;
-  font-size: 0.6rem;
+  width: 2.4rem;
+  line-height: .7rem;
+  font-size: 0.3rem;
   font-weight: 700;
   color: #999;
   text-align: center;
@@ -343,26 +343,25 @@ select {
   border-color: #4f76e6;
 }
 .store-info-form .city-box .letter-title {
-  padding: 0 1.4rem 0 1rem;
-  padding-top: 0.48rem;
+  padding: 0  1rem;
   height: 0.88rem;
   line-height: 0.88rem;
-  font-size: 0.64rem;
+  font-size: 0.4rem;
   font-weight: 700;
   color: #4f76e6;
 }
 .store-info-form .city-box .item-list {
-  padding: 0 1.8rem 0 1rem;
+  padding: 0 .7rem;
 }
 .store-info-form .city-box .item-list li {
-  line-height: 1.8rem;
-  font-size: 0.6rem;
+  line-height: .8rem;
+  font-size: 0.3rem;
   font-weight: 700;
   color: #666;
   border-bottom: 0.5px solid #edeef5;
 }
 .store-info-form .city-box #cityBox {
-  height: 13.24rem;
+  height: 9rem;
   background: #fff;
   overflow: hidden;
 }
@@ -370,18 +369,18 @@ select {
   position: absolute;
   height: 100%;
   right: 0;
-  top: 1.92rem;
+  top: 3rem;
   z-index: 20;
 }
 .store-info-form .city-box .city-sidaber p {
   box-sizing: border-box;
   padding-right: 0.2rem;
-  width: 1.78rem;
-  line-height: 0.68rem;
-  font-size: 0.48rem;
+  width: 1rem;
+  font-size: 0.3rem;
   font-weight: 700;
   text-align: center;
   color: #666;
+  padding: 0rem;
 }
 .store-info-form .area-box {
   position: fixed;
