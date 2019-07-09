@@ -14,7 +14,7 @@ $.getJSON("./js/city.json", function (data){
             var result = data[key][i];
             citySoon += '<li class="item border-bottom" title='+result.shortCode+'>'+result.name+'</li>'
         }
-        citySoon += '</ul><';
+        citySoon += '</ul>';
         
         cityStr += (cityStart + citySoon);
     }
@@ -28,9 +28,7 @@ $.getJSON("./js/city.json", function (data){
             var result = res[key][i].city;
             if( result.name == name ){
                 for(var k = 0;k < result.areaList.length;k ++){
-                    oArea += `
-                    <li class="cityitem">${result.areaList[k].name}</li>
-                    `;
+                    oArea += '<li class="cityitem">${result.areaList[k].name}</li>';
                 }
             }
         }
