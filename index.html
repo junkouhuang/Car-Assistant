@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
 <title>车保姆</title>
+<link rel="stylesheet" href="css/responsive.css" />
 <link href="css/iconfont.css" type="text/css" rel="stylesheet"/>
 <link href="css/responsive.css" type="text/css" rel="stylesheet"/>
 <link href="css/index.css" type="text/css" rel="stylesheet"/>
@@ -108,7 +109,7 @@
         function setRem(){
             var html = document.getElementsByTagName('html')[0];
             var pageWidth = html.getBoundingClientRect().width;
-            html.style.fontSize = pageWidth/15+'px';
+            //html.style.fontSize = pageWidth/15+'px';
         }
     })();
 </script>
@@ -132,6 +133,15 @@
         $("#city b").text(e.target["title"])
         $('.city-box').slideUp(500);
         $('.masker').addClass('hidden');
+    })
+    $('.city-sidaber').on('click',function(e){
+        var value = e.target.innerHTML;
+        var alphabet = $('.letter-title');
+        alphabet.map(function(i,item){
+            if(item.innerHTML == value){
+                scroll.scrollToElement(item);
+            }
+        })
     })
 </script>
 </html>
