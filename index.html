@@ -69,10 +69,10 @@
 			                </div>
 			                <div class="hot-city">
 			                    <div class="hot">
-			                        <a data-value="北京市">北京</a>
-			                        <a data-value="上海市">上海</a>
-			                        <a data-value="南京市">南京</a>
-			                        <a data-value="广州市">广州</a>
+			                        <a title="京A">北京</a>
+			                        <a title="沪A">上海</a>
+			                        <a title="粤A">广州</a>
+			                        <a title="粤B">深圳</a>
 			                    </div>
 			                </div>
 			                <article id="cityBox" class="wrapper">
@@ -122,18 +122,31 @@
     }
     var wrapper = document.querySelector('.wrapper');
     var scroll = new BScroll(wrapper, options);
-    // 城市选择
+    // 城市选择拉起窗体
     $('#city').on('click',function(){
         $('.city-box').slideDown(500,function(){
             scroll.refresh();
         });
         $('.masker').removeClass('hidden');
     }) 
+    //点击半透明背景收起窗体
+     $('.masker').on('click',  function(e){
+        $('.city-box').slideUp(500);
+        $('.masker').addClass('hidden');
+    })
+     //选择地区获取对应车牌代码
     $('.city-box .content').on('click', 'li',  function(e){
         $("#city b").text(e.target["title"])
         $('.city-box').slideUp(500);
         $('.masker').addClass('hidden');
     })
+    //热门城市选择
+    $(".hot").on("click",'a',function(e){
+    	$("#city b").text(e.target["title"])
+        $('.city-box').slideUp(500);
+        $('.masker').addClass('hidden');
+    })
+    //点击索引字母定位到对应栏目
     $('.city-sidaber').on('click',function(e){
         var value = e.target.innerHTML;
         var alphabet = $('.letter-title');
