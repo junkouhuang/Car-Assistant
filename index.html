@@ -59,6 +59,7 @@
 			            <button class="j-buy-now">快速报价</button>
 			        </div>
 			        <div class="masker hidden"></div>
+			        <div class="masker_ hidden"></div>
 			        <div class="city-box hidden">
 			            <section class="express-city-box">
 			                <div class="hot-city-title">
@@ -171,13 +172,18 @@
         $('.area-box').slideDown(500,function(){
             scroll.refresh();
         });
-        $('.masker').removeClass('hidden');
+        $('.masker_').removeClass('hidden');
     }) 
     //点击半透明背景收起窗体
      $('.masker').on('click',  function(e){
         $('.city-box').slideUp(500);
         $('.area-box').slideUp(500);
         $('.masker').addClass('hidden');
+    })
+     $('.masker_').on('click',  function(e){
+        $('.city-box').slideUp(500);
+        $('.area-box').slideUp(500);
+        $('.masker_').addClass('hidden');
     })
      //选择地区获取对应车牌代码
     $('.city-box .content').on('click', 'li',  function(e){
