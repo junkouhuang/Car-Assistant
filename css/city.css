@@ -259,7 +259,7 @@ select {
 }
 .store-info-form .controls-city .city-wrapper{
   position: relative;
-  background-color: #3780fd;
+  background: linear-gradient(90deg,#689ffd,#3780fd);
   color: #fff;
   display: flex;
   align-items: center;
