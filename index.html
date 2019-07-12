@@ -132,7 +132,7 @@
 				                <li>N</li>
 				                <li>M</li>
 				                <li class="key_ok">确定</li>
-				                <li class="iconfont icon-shanchu"></li>
+				                <li class="iconfont icon-shanchu" id="del"></li>
 				            </ul>
 				        </div>
 					</div>
@@ -175,13 +175,15 @@
         $('.masker_').removeClass('hidden');
     }) 
     //点击半透明背景收起窗体
-     $('.masker').on('click',  function(e){
+    $('.masker').on('click',  function(e){
         $('.city-box').slideUp(500);
-        $('.area-box').slideUp(500);
         $('.masker').addClass('hidden');
     })
-     $('.masker_').on('click',  function(e){
-        $('.city-box').slideUp(500);
+    $('.masker_').on('click',  function(e){
+        $('.area-box').slideUp(500);
+        $('.masker_').addClass('hidden');
+    })
+    $('.cancal>div,.key_ok').on('click',  function(e){
         $('.area-box').slideUp(500);
         $('.masker_').addClass('hidden');
     })
@@ -207,31 +209,13 @@
             }
         })
     })
-    // 自定义键盘事件
-	$(".selectCarBtn").click(function(){
-	    $.popup(".popup-selectCarBox");
-	});
-	$(".closeSelectCarBox").click(function(){
-	    $.closeModal(".popup-selectCarBox");
-	});
-	$(".popup-selectCarBox").click(function(e){
-	    $.closeModal(".popup-selectCarBox");
-	})
-	$(".selectCarCon").click(function(e){
-	    e.stopPropagation();
-	})
-	var carNum = "";
-	$(".selectCarCon li").not('.delect_back,.key_ok').click(function(){
-	    carNum = carNum + $(this).html();
-	    $(".selectCarBtn").val(carNum);
-	});
-	$(".selectCarCon li.delect_back").click(function(){
-	    var num = carNum.substr(0, carNum.length - 1);
-	    $(".selectCarBtn").val(num);
-	    carNum = num;
-	});
-	$(".selectCarCon li.key_ok").click(function(){
-	    $.closeModal(".popup-selectCarBox");
-	});
+    $(".number li,.english li").click(function(e){
+    	if($("#carno").val().length<5){
+    		$("#carno").val($("#carno").val()+e.currentTarget.innerHTML)
+    	}
+    })
+    $("#del").on("click",function(){
+    	$("#carno").val($("#carno").val().substring(0,$("#carno").val().length-1))
+    })
 </script>
 </html>
