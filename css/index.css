@@ -190,8 +190,12 @@ body {
 }
 
 .keyboard-custom .cancal {
-	text-align: right;
-	padding: .2rem;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.keyboard-custom .cancal div {
+	padding: .2rem;	
 }
 
 .keyboard-custom .latin-list li {
