@@ -53,12 +53,11 @@
 			                    <b>请选择</b>
 			                    <i class="iconfont icon-down-trangle-copy"></i>
 			                </div>
-			                <input type="text" placeholder="请输入车牌号">
+			                <input type="text" placeholder="请输入车牌号" readonly="readonly" id="carno">
 			            </div>
 			            <input type="number" placeholder="请输入手机号码" class="phone">
 			            <button class="j-buy-now">快速报价</button>
 			        </div>
-			
 			        <div class="masker hidden"></div>
 			        <div class="city-box hidden">
 			            <section class="express-city-box">
@@ -84,15 +83,60 @@
 			                </article>
 			            </section>
 			        </div>
-			        <div class="area-box hidden">
-			            <div class="hot-city-title">
-			                <i></i>
-			                <h4>区/县</h4>
-			            </div>
-			            <ul class="citylist">
-			                <li class="cityitem" values="朝阳区">朝阳区</li>
-			            </ul>
-			        </div>
+			    	<div class="area-box hidden keyboard-custom">
+				        <div class="cancal">
+				            <div>取消</div>
+				        </div>
+				        <div class="latin-list">
+				            <ul class="number">
+				                <li>1</li>
+				                <li>2</li>
+				                <li>3</li>
+				                <li>4</li>
+				                <li>5</li>
+				                <li>6</li>
+				                <li>7</li>
+				                <li>8</li>
+				                <li>9</li>
+				                <li>0</li>
+				            </ul>
+				            <ul class="english">
+				                <li>Q</li>
+				                <li>W</li>
+				                <li>E</li>
+				                <li>R</li>
+				                <li>T</li>
+				                <li>Y</li>
+				                <li>U</li>
+				                <li>I</li>
+				                <li>O</li>
+			                </ul>
+				            <ul class="english">    
+				                <li>A</li>
+				                <li>S</li>
+				                <li>D</li>
+				                <li>F</li>
+				                <li>G</li>
+				                <li>H</li>
+				                <li>J</li>
+				                <li>K</li>
+				                <li>P</li>
+		                    </ul>
+				            <ul class="english">    
+				                <li>Z</li>
+				                <li>X</li>
+				                <li>C</li>
+				                <li>V</li>
+				                <li>B</li>
+				                <li>N</li>
+				                <li>M</li>
+				                <li>L</li>
+				                <li></li>
+				                <li class="key_ok">确定</li>
+				                <li class="iconfont icon-shanchu"></li>
+				            </ul>
+				        </div>
+					</div>
 			    </form>
         	</div>
         	<div class="btn-asks">
@@ -108,17 +152,6 @@
 <script type="text/javascript" src="js/jquery.min.js" ></script>
 <script type="text/javascript" src="js/city.js" ></script>
 <script type="text/javascript" src="js/better-scroll.js" ></script>
-<script type="text/javascript">
-    (function(){
-        setRem();
-        window.addEventListener('orientationchange' in window?"orientationchange":"resize",setRem);
-        function setRem(){
-            var html = document.getElementsByTagName('html')[0];
-            var pageWidth = html.getBoundingClientRect().width;
-            //html.style.fontSize = pageWidth/15+'px';
-        }
-    })();
-</script>
 <script>
     var options = {
         scrollY: true, // 因为scrollY默认为true，其实可以省略
@@ -134,10 +167,18 @@
             scroll.refresh();
         });
         $('.masker').removeClass('hidden');
+    })
+    //车牌号码拉起
+    $('#carno').on('click',function(){
+        $('.area-box').slideDown(500,function(){
+            scroll.refresh();
+        });
+        $('.masker').removeClass('hidden');
     }) 
     //点击半透明背景收起窗体
      $('.masker').on('click',  function(e){
         $('.city-box').slideUp(500);
+        $('.area-box').slideUp(500);
         $('.masker').addClass('hidden');
     })
      //选择地区获取对应车牌代码
@@ -162,5 +203,31 @@
             }
         })
     })
+    // 自定义键盘事件
+	$(".selectCarBtn").click(function(){
+	    $.popup(".popup-selectCarBox");
+	});
+	$(".closeSelectCarBox").click(function(){
+	    $.closeModal(".popup-selectCarBox");
+	});
+	$(".popup-selectCarBox").click(function(e){
+	    $.closeModal(".popup-selectCarBox");
+	})
+	$(".selectCarCon").click(function(e){
+	    e.stopPropagation();
+	})
+	var carNum = "";
+	$(".selectCarCon li").not('.delect_back,.key_ok').click(function(){
+	    carNum = carNum + $(this).html();
+	    $(".selectCarBtn").val(carNum);
+	});
+	$(".selectCarCon li.delect_back").click(function(){
+	    var num = carNum.substr(0, carNum.length - 1);
+	    $(".selectCarBtn").val(num);
+	    carNum = num;
+	});
+	$(".selectCarCon li.key_ok").click(function(){
+	    $.closeModal(".popup-selectCarBox");
+	});
 </script>
 </html>
