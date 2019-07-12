@@ -156,3 +156,30 @@ body {
 	color: #fff;
 	border-radius: 0.2rem;
 }
+
+.btn-asks {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	padding: .1rem;
+}
+
+.btn-asks .j-onlineService {
+	padding: .2rem 1rem;
+	font-size: .3rem;
+	background: linear-gradient(90deg,#689ffd,#3780fd);
+	color: #fff;
+	border-radius: 0.2rem;
+	margin: auto;
+}
+
+.btn-asks .telPrice {
+	padding: .2rem 1rem;
+	font-size: .3rem;
+	background-color: #FF9600;
+	color: #fff;
+	border-radius: 0.2rem;
+	margin: auto;
+}
