@@ -14,6 +14,7 @@
 <body class="info-verifiy">
 	<div id="app">
     	<div class="main-container">
+    		<div class="tips"></div>
         	<div class="banner-swiper">
         		<div class="swiper-wrapper">
         			<img src="images/slide.jpg" />
@@ -56,7 +57,7 @@
 			                <input type="text" placeholder="请输入车牌号" readonly="readonly" id="carno">
 			            </div>
 			            <input type="number" placeholder="请输入手机号码" class="phone">
-			            <button class="j-buy-now">快速报价</button>
+			            <button class="j-buy-now" type="button">快速报价</button>
 			        </div>
 			        <div class="masker hidden"></div>
 			        <div class="masker_ hidden"></div>
@@ -166,6 +167,9 @@
             scroll.refresh();
         });
         $('.masker').removeClass('hidden');
+        $('.tips').slideDown(500,function(){
+            scroll.refresh();
+        });
     })
     //车牌号码拉起
     $('#carno').on('click',function(){
@@ -217,5 +221,17 @@
     $("#del").on("click",function(){
     	$("#carno").val($("#carno").val().substring(0,$("#carno").val().length-1))
     })
+    //快速报价
+    $(".j-buy-now").on("click",function(){
+    	var mobilereg = /^(((13[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}|(19[0-9]{1})))+\d{8})$/;
+    	if(!mobilereg.test($(".phone").val())){
+    		$(".tips").addClass("slidedown");
+    		$(".tips").text("手机格式有误");
+    		setTimeout(function(){
+    			$(".tips").removeClass("slidedown");
+    		},1500)
+    	}
+    })
+    
 </script>
 </html>
