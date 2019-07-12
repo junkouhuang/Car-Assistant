@@ -225,7 +225,7 @@ select {
   box-sizing: border-box;
   width: 100%;
   background-color: #f7f7f8;
-  border-radius: 0.2rem;
+  border-radius: .05rem;
   overflow: hidden;
 }
 .store-info-form .controls input,
