@@ -266,6 +266,7 @@ select {
   justify-content: space-between;
   background: #fff;
   justify-content: center;
+  margin-top: .05rem;
 }
 .store-info-form .controls-city .city-wrapper{
   position: relative;
