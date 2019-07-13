@@ -124,7 +124,7 @@ body, button, input, select, textarea {
 .nav-list li{
 	display: flex;
 	align-items: center;
-	padding: .5rem;
+	padding: .3rem .5rem;
 	font-size: .7rem;
 	border-top: 1px solid #f5f5f5;
 }
