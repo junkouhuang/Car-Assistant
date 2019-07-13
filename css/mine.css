@@ -17,7 +17,6 @@ body,dd, dl, dt, form, h1, h2, h3, h4, h5, h6, html, img, input, li, ol, p, ul{
     -webkit-font-smoothing: inherit;
     list-style: none;
 }
-	}
 body {
     background: #f5f5f5;
     color: #444;
@@ -52,9 +51,12 @@ body, button, input, select, textarea {
     z-index: 1;
     display: flex;
     box-sizing: content-box;
-	}
+	}	
 .swiper-wrapper img{
-	width: 100%;
+	width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    margin: auto;
 }
 .card-box {
     box-sizing: border-box;
@@ -108,25 +110,48 @@ body, button, input, select, textarea {
 	margin: auto;
 	}
 .box-flex li strong{
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: #f77733;
 }
 .box-flex li span {
 	font-size: 0.7rem;
+	color: #999;
 }
 .nav-list{
 	background-color: #fff;
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 .nav-list li{
 	display: flex;
+	align-items: center;
 	padding: .5rem;
 	font-size: .7rem;
 	border-top: 1px solid #f5f5f5;
 }
-.nav-list li:last-child{
+.nav-list .order i:first-child {
+	color: #00853E;
+	margin-right: .1rem;
+	font-size: .9rem;
+}
+.nav-list .member i:first-child {
+	color: #3974EA;
+	margin-right: .1rem;
+	font-size: .9rem;
+}
+.nav-list .order i:last-child {
+	color: #ccc;
+}
+.nav-list .member i:last-child {
+	color: #ccc;
+}
+.nav-list .exit  {
 	text-align: center;
+	color: red;
+	font-size: .7rem;
 }
 .nav-list li span{
 	flex: 1;
+}
+.nav-list li span i{
+	font-size: .9rem;
 }
