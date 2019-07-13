@@ -35,7 +35,7 @@ body, button, input, select, textarea {
 	}
 .banner-swiper {
     width: 100%;
-    height: 10rem;
+    height: 9rem;
     list-style: none;
     background: linear-gradient(#fd983e, #f4672e);
 	}
@@ -45,12 +45,17 @@ body, button, input, select, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
 	}	
 .swiper-wrapper img{
 	width: 3rem;
     height: 3rem;
     border-radius: 100%;
+}
+.swiper-wrapper b{
+	color: #fff;
+	font-size: .7rem;
+    margin-top: .2rem;
 }
 .card-box {
 	height: 6rem;
