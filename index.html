@@ -68,35 +68,56 @@
 			        </div>
 			        <div class="masker hidden"></div>
 			        <div class="masker_ hidden"></div>
-			        <div class="city-box hidden">
-			            <section class="express-city-box">
-			                <div class="hot-city-title">
-			                    <i></i>
-			                    <h4>热门城市</h4>
-			                </div>
-			                <div id="city-sidaber" class="city-sidaber">
-			                    <p>A</p><p>B</p><p>C</p><p>D</p><p>E</p><p>F</p><p>G</p><p>H</p><p>J</p><p>K</p><p>L</p><p>M</p><p>N</p><p>P</p><p>Q</p><p>R</p><p>S</p><p>T</p><p>W</p><p>X</p><p>Y</p><p>Z</p>
-			                </div>
-			                <div class="hot-city">
-			                    <div class="hot">
-			                        <a title="京A">北京</a>
-			                        <a title="沪A">上海</a>
-			                        <a title="粤A">广州</a>
-			                        <a title="粤B">深圳</a>
-			                    </div>
-			                </div>
-			                <article id="cityBox" class="wrapper">
-			                    <section class="content" style="pointer-events: auto; transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px);">
-			                    	
-			                    </section>
-			                </article>
-			            </section>
+			        <div class="city-box hidden keyboard-custom-province">
+			            <article  class="wrapper">
+		                    <section class="content">
+		                    	<ul class="province">
+					                <li>粤</li>
+					                <li>津</li>
+					                <li>冀</li>
+					                <li>晋</li>
+					                <li>蒙</li>
+					                <li>辽</li>
+					                <li>吉</li>
+					                <li>黑</li>
+				                </ul>
+					            <ul class="province">    
+					                <li>沪</li>
+					                <li>苏</li>
+					                <li>浙</li>
+					                <li>皖</li>
+					                <li>闽</li>
+					                <li>赣</li>
+					                <li>鲁</li>
+					                <li>豫</li>
+			                    </ul>
+					            <ul class="province">    
+					                <li>鄂</li>
+					                <li>湘</li>
+					                <li>京</li>
+					                <li>桂</li>
+					                <li>琼</li>
+					                <li>渝</li>
+					                <li>川</li>
+					                <li>贵</li>
+					            </ul>
+					            <ul class="province">    
+					                <li>云</li>
+					                <li>藏</li>
+					                <li>陕</li>
+					                <li>甘</li>
+					                <li>青</li>
+					                <li>宁</li>
+					                <li>新</li>
+					            </ul>
+		                    </section>
+		                </article>
 			        </div>
-			    	<div class="area-box hidden keyboard-custom">
+			        <div class="area-box hidden keyboard-custom">
 				        <div class="cancal">
 				            <div>取消</div>
 				        </div>
-				        <div class="latin-list">
+			        	<div class="latin-list">
 				            <ul class="number">
 				                <li>1</li>
 				                <li>2</li>
@@ -142,7 +163,7 @@
 				                <li class="key_ok">确定</li>
 				                <li class="iconfont icon-shanchu" id="del"></li>
 				            </ul>
-				        </div>
+			        	</div>
 					</div>
 			    </form>
         	</div>
@@ -157,7 +178,6 @@
     </div>
 </body>
 <script type="text/javascript" src="js/jquery.min.js" ></script>
-<script type="text/javascript" src="js/city.js" ></script>
 <script type="text/javascript" src="js/better-scroll.js" ></script>
 <script>
     var options = {
@@ -168,9 +188,9 @@
     }
     var wrapper = document.querySelector('.wrapper');
     var scroll = new BScroll(wrapper, options);
-    // 城市选择拉起窗体
+    // 身份选择拉起窗体
     $('#city').on('click',function(){
-        $('.city-box').slideDown(500,function(){
+        $('.keyboard-custom-province').slideDown(500,function(){
             scroll.refresh();
         });
         $('.masker').removeClass('hidden');
@@ -178,55 +198,46 @@
             scroll.refresh();
         });
     })
-    //车牌号码拉起
-    $('#carno').on('click',function(){
-        $('.area-box').slideDown(500,function(){
+    //点击省份半透明背景收起窗体
+    $('.masker').on('click',  function(e){
+        $('.keyboard-custom-province').slideUp(500);
+        $('.masker').addClass('hidden');
+    })
+    //点击获取省份
+    $(".province li").click(function(e){
+    	$("#city b").text(e.currentTarget.innerHTML);
+    	$('.keyboard-custom-province').slideUp(500);
+        $('.masker').addClass('hidden');
+    })
+    //车牌选择拉起窗体
+    $("#carno").click(function(){
+    	$('.keyboard-custom').slideDown(500,function(){
             scroll.refresh();
         });
         $('.masker_').removeClass('hidden');
-    }) 
-    //点击半透明背景收起窗体
-    $('.masker').on('click',  function(e){
-        $('.city-box').slideUp(500);
-        $('.masker').addClass('hidden');
+        $('.tips').slideDown(500,function(){
+            scroll.refresh();
+        });
     })
+    //点击车牌半透明背景收起窗体
     $('.masker_').on('click',  function(e){
-        $('.area-box').slideUp(500);
+        $('.keyboard-custom').slideUp(500);
         $('.masker_').addClass('hidden');
     })
-    $('.cancal>div,.key_ok').on('click',  function(e){
-        $('.area-box').slideUp(500);
-        $('.masker_').addClass('hidden');
-    })
-     //选择地区获取对应车牌代码
-    $('.city-box .content').on('click', 'li',  function(e){
-        $("#city b").text(e.target["title"])
-        $('.city-box').slideUp(500);
-        $('.masker').addClass('hidden');
-    })
-    //热门城市选择
-    $(".hot").on("click",'a',function(e){
-    	$("#city b").text(e.target["title"])
-        $('.city-box').slideUp(500);
-        $('.masker').addClass('hidden');
-    })
-    //点击索引字母定位到对应栏目
-    $('.city-sidaber').on('click',function(e){
-        var value = e.target.innerHTML;
-        var alphabet = $('.letter-title');
-        alphabet.map(function(i,item){
-            if(item.innerHTML == value){
-                scroll.scrollToElement(item);
-            }
-        })
-    })
+    //点击获得车牌
     $(".number li,.english li").click(function(e){
-    	if($("#carno").val().length<5){
+    	if($("#carno").val().length<6){
     		$("#carno").val($("#carno").val()+e.currentTarget.innerHTML)
     	}
     })
+    //删除车牌
     $("#del").on("click",function(){
     	$("#carno").val($("#carno").val().substring(0,$("#carno").val().length-1))
+    })
+    //取消
+     $('.cancal>div,.key_ok').on('click',  function(e){
+        $('.area-box').slideUp(500);
+        $('.masker_').addClass('hidden');
     })
     //快速报价
     $(".j-buy-now").on("click",function(){
