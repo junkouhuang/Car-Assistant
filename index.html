@@ -218,6 +218,7 @@
         $('.tips').slideDown(500,function(){
             scroll.refresh();
         });
+        document.getElementsByTagName('body').scrollTop(document.documentElement.scrollHeight)
     })
     //点击车牌半透明背景收起窗体
     $('.masker_').on('click',  function(e){
@@ -301,6 +302,5 @@
 			});
     	
     })
-    
 </script>
 </html>
