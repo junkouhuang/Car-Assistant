@@ -67,7 +67,7 @@ body, button, input, select, textarea {
 	}
 .select-zone {
     background: #fff;
-    padding: 1rem;
+    padding: .5rem;
     /*box-shadow: 0 8px 14px 0 hsla(0,0%,92%,.6);*/
     border-radius: 8px;
 	}
