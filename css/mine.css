@@ -35,7 +35,7 @@ body, button, input, select, textarea {
 	}
 .banner-swiper {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -59,18 +59,15 @@ body, button, input, select, textarea {
     margin: 2rem auto;
 }
 .card-box {
-    box-sizing: border-box;
+	height: 6rem;
     position: relative;
-    padding: 0 15px;
+    padding: 0 1rem;
     z-index: 2;
+    margin: -3rem auto;
 	}
 .select-zone {
     background: #fff;
-    overflow: hidden;
-    width: 100%;
-    margin: -3rem auto;
-    margin-bottom: 0;
-    padding: 10px 15px 20px;
+    padding: 1rem;
     /*box-shadow: 0 8px 14px 0 hsla(0,0%,92%,.6);*/
     border-radius: 8px;
 	}
@@ -114,12 +111,12 @@ body, button, input, select, textarea {
 	color: #f77733;
 }
 .box-flex li span {
-	font-size: 0.6rem;
+	font-size: 0.5rem;
 	color: #999;
 }
 .nav-list{
 	background-color: #fff;
-	margin-top: .5rem;
+	margin-top: 4rem;
 }
 .nav-list li{
 	display: flex;
