@@ -251,3 +251,23 @@ body {
 	background-color: #FFFFFF;
 	border-radius: .1rem;
 }
+
+.keyboard-custom-province {
+	background-color: #ccc;	
+}
+
+.keyboard-custom-province li {
+	display: inline-block;
+}
+
+.keyboard-custom-province  .province {
+	display: flex;
+	padding: .1rem 0;
+}
+
+.keyboard-custom-province  .province li {
+	margin: auto;
+	padding: .2rem;
+	background-color: #FFFFFF;
+	border-radius: .1rem;
+}
