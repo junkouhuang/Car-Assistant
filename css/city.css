@@ -318,9 +318,7 @@ select {
   right: 0;
   left: 0;
   bottom: 0;
-  width: 6.5rem;
   margin: 0 auto;
-  border-radius: 0.2rem 0.2rem 0 0;
   overflow: hidden;
   z-index: 11;
 }
@@ -374,8 +372,7 @@ select {
   border-bottom: 0.5px solid #edeef5;
 }
 .store-info-form .city-box #cityBox {
-  height: 9rem;
-  background: #fff;
+  background: #ccc;
   overflow: hidden;
 }
 .store-info-form .city-box .city-sidaber {
