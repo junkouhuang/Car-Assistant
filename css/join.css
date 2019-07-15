@@ -36,13 +36,16 @@ b{
 }
 .p2 {
 	color: #ccc;
+	font-size: .6rem;
 }
 .p3 {
 	color: #ccc;
+	font-size: .6rem;
 }
 .p4{
     margin-bottom: 2rem;
     color: #ccc;
+    font-size: .6rem;
 }
 .p5{
     width: 96%;
@@ -50,6 +53,12 @@ b{
     border-bottom: 1px solid #f5f5f5;
     display: block;
     margin-bottom: 1rem;
+}
+.p6{
+	font-size: 0.6rem;
+}
+.p7{
+	font-size: 0.6rem;
 }
 .qrcode {
 	width: 90%;
