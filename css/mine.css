@@ -46,11 +46,21 @@ body, button, input, select, textarea {
     flex-direction: column;
     align-items: center;
     padding-top: 1.5rem;
+    position: relative;
 	}	
 .swiper-wrapper img{
 	width: 3rem;
     height: 3rem;
     border-radius: 100%;
+}
+.swiper-wrapper span {
+    position: absolute;
+    width: 1.3rem;
+    background: #FD2828;
+    top: 4rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
 }
 .swiper-wrapper b{
 	color: #fff;
