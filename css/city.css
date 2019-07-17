@@ -229,7 +229,7 @@ select {
   color: #ccc;
 }
 .store-info-form .controls-store {
-  height: .8rem;
+  height: .4rem;
 }
 .store-info-form .controls {
   box-sizing: border-box;
@@ -242,13 +242,12 @@ select {
 .store-info-form .controls textarea {
   box-sizing: border-box;
   width: 100%;
-  font-size: 0.3rem;
   color: #666666;
 }
 .store-info-form .controls input {
   height: 100%;
   border:1px solid #ddd;
-  padding: 0 1rem;
+  padding: 0 .1rem;
 }
 .store-info-form .controls textarea {
   line-height: 0.8rem;
@@ -274,7 +273,7 @@ select {
   color: #fff;
   display: flex;
   align-items: center;
-  width: 2.4rem;
+  width: 1rem;
   justify-content: center;
 }
 .store-info-form .controls-city .icon-down {
