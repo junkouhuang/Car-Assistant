@@ -120,7 +120,7 @@ body {
 .img-btn{
 	position: fixed;
 	top: 50%;
-	margin-top: -1.5rem;
+	margin-top: -.6rem;
 	width: .5rem;
 	height: 1.2rem;
 	right: 0;
@@ -219,7 +219,7 @@ body {
 }
 
 .keyboard-custom .cancal div {
-	padding: .2rem;	
+	padding: .1rem;	
 }
 
 .keyboard-custom .latin-list li {
@@ -228,26 +228,26 @@ body {
 
 .keyboard-custom .latin-list .number {
 	display: flex;
-	padding:.1rem 0;
+	padding:.05rem 0;
 }
 
 .keyboard-custom .latin-list .english {
 	display: flex;
-	padding: .1rem 0;
+	padding: .05rem 0;
 }
 
 .keyboard-custom .latin-list .number li {
 	margin: auto;
 	padding: .1rem;
 	background-color: #FFFFFF;
-	border-radius: .1rem;
+	border-radius: .05rem;
 }
 
 .keyboard-custom .latin-list .english li {
 	margin: auto;
 	padding: .1rem;
 	background-color: #FFFFFF;
-	border-radius: .1rem;
+	border-radius: .05rem;
 }
 
 .keyboard-custom-province {
@@ -260,12 +260,12 @@ body {
 
 .keyboard-custom-province  .province {
 	display: flex;
-	padding: .1rem 0;
+	padding: .05rem 0;
 }
 
 .keyboard-custom-province  .province li {
 	margin: auto;
 	padding: .1rem;
 	background-color: #FFFFFF;
-	border-radius: .1rem;
+	border-radius: .05rem;
 }
