@@ -1,19 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
-	font-size: .28rem;
-}
-
-body,dd, dl, dt, form, h1, h2, h3, h4, h5, h6, html, img, input, li, ol, p, ul{
+*{
 	margin: 0;
-    padding: 0;
-    list-style: none;
+	padding: 0;
 }
-
-body {
-    background: #fff;
-    color: #444;
+body, button, input, select, textarea {
+    font: .14rem Arial,sans-serif;
 }
 
 
