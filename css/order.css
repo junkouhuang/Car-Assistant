@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f5f5f5;
+}
+body, button, input, select, textarea {
+    font: .14rem Arial,sans-serif;
+}
+.order_nav {
+	background-color: #fff;
+	padding: .3rem 0;
+}
+.order_nav ul{
+	display: flex;
+}
+.order_nav li {
+    font-size: .4rem;
+    list-style: none;
+    margin: auto;
+}
+.order_nav .active {
+	color: #3780fd;
+	position: relative;
+}
+.order_nav .active:after{
+	content: "";
+	width: 1rem;
+	height: 2px;
+	background-color:#3780fd ;
+	position: absolute;
+	bottom: -.1rem;
+	left: 0;
+	right: 0;
+}
+.order_list .empty {
+	list-style: none;
+	font-size: .4rem;
+	text-align: center;
+	margin-top: 1rem;
+}
