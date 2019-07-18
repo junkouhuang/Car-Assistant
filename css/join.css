@@ -1,77 +1,64 @@
 @charset "utf-8";
 /* CSS Document */
-* {
-	box-sizing: border-box;
-	font-style: normal;
-	}
-html {
-    font-size: 24px;
-	}
-body,dd, dl, dt, form, h1, h2, h3, h4, h5, h6, html, img, input, li, ol, p, ul{
+*{
 	margin: 0;
-    padding: 0;
-    outline-width: 0;
-    outline-style: none;
-    outline-offset: 0;
-    border: 0;
-    -webkit-font-smoothing: inherit;
-    list-style: none;
+	padding: 0;
 }
-body {
-    background: #3780FD;
+body{
+	background: #3780FD;
     color: #444;
-	}
+}
 body, button, input, select, textarea {
-    font: .14rem/1.6 Arial,sans-serif;
+    font: .14rem Arial,sans-serif;
 }
 .p1 {
 	color: #fff;
 	text-align: center;
-	font-size: .7rem;
+	font-size: .2rem;
 	position: relative;
-	top: .5rem;
+	top: .1rem;
 }
 b{
-	font-size: .7rem;
+	font-size: .15rem;
 }
 .p2 {
 	color: #ccc;
-	font-size: .6rem;
+	font-size: .15rem;
 }
 .p3 {
 	color: #ccc;
-	font-size: .6rem;
+	font-size: .15rem;
 }
 .p4{
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
     color: #ccc;
-    font-size: .6rem;
+    font-size: .15rem;
 }
 .p5{
     width: 96%;
     margin-left: 2%;
     border-bottom: 1px solid #f5f5f5;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: .1rem;
 }
 .p6{
-	font-size: 0.6rem;
-	padding: 0 1rem;
+	font-size: .15rem;
+	padding: 0 .1rem;
 	color: #999;
 }
 .qrcode {
 	width: 90%;
     margin-left: 5%;
 	background-color: #fff;
-	height: 20rem;
+	height: 4rem;
+	padding: .5rem 0;
 	border-radius: 6px;
     position: absolute;
     top: 50%;
-    margin-top: -10rem;
+    margin-top: -2.5rem;
     text-align: center;
-    padding: 1rem 0;
 }
 img{
-	width:8rem;
-	height: 8rem;
+	width:2rem;
+	height: 2rem;
 }
